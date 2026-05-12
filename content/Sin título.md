@@ -1,0 +1,8 @@
+acto 1
+Debía entregar un proyecto que fuera innovador dentro de la industria médica aplicando las matemáticas en la vida real. Estaba en un grupo con 3 compañeros que no tenían mucho tiempo ni entusiasmo para hacer el proyecto y la verdad yo tampoco. El reto era claro, hacer algo sencillo que pudiera desarrollarse de forma tranquila, una solución elegante.
+
+acto 2
+Decidimos hacer un pequeño robot que pudiera hacer acompañamiento emocional a quienes lo necesitaran, nos inspiramos en BMO de Hora de Aventura ya que era un personaje carismático y familiar. Nos pusimos manos a la obra, uno hacia el modelo de IA, otro la interfaz gráfica, otro el diseño de la UI y finalmente yo debía encargarme del objeto físico, el robot. Diseñé con cariño cada parte, hice esquemas y ensayos hasta tener un producto agradable. Ensamblé su pantalla pensando en su cara, su procesador pensando en su cabeza y sus pequeñas manos y piernas pensando que sería agradable que un compañero emocional me diera un abrazo. Me dejé emocionar por el proyecto y terminé haciendo mucho más de lo que había pensado hacer, procuré que funcionara todo y me  metí en el trabajo de mis compañeros para que saliera lo mejor posible. Ahora era personal, yo quería a BMO.
+
+acto 3
+Finalmente llegó el día de la presentación y BMO no defraudó. Muchas personas lo vieron sorprendidas y lo ensayaron, todos acabaron con una sonrisa en la cara. BMO era todo lo que quería que fura con lo que pude hacer. Me sentí como el rabino de Borges mirando a su Golem, salvo que el mío si podía hablar.

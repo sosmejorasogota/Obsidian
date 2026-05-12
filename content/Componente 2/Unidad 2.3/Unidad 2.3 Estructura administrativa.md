@@ -1,0 +1,9 @@
+## Introducción 
+
+Esta Unidad define e identifica la estructura, organización y funcionamiento de los organismos y de las entidades de Bogotá, Distrito Capital, presenta el organigrama los sectores y las entidades que conforman la Administración Distrital y analiza el presupuesto del Distrito Capital para el año 2025 ha sido aprobado por el Concejo de Bogotá por un valor de $38,4 billones de pesos. 
+
+Acorde con el crecimiento de la población, sus dinámicas y su complejidad, la estructura de la administración de la ciudad, se ha ido trasformado en una más robusta y compleja. 
+
+Además del Concejo, la Contraloría, la Personería y la Veeduría, el Acuerdo 257 de 2006 estableció 15 sectores administrativos y de coordinación: hacienda, educación, movilidad, salud, integración social, hábitat, cultura, seguridad, ambiente, gobierno, desarrollo económico, gestión pública, planeación, mujer y gestión pública.   
+
+El presupuesto de ingresos está constituido en cerca del cincuenta por ciento por los ingresos corrientes, el treinta por recursos de capital y el veinte restante por las trasferencias de la Nación. La forma adecuada y responsable como han sido manejadas las finanzas públicas de la ciudad se evidencia en el prepuesto del año 2025 en el que un porcentaje muy alto, más del ochenta por ciento se destina a los gastos de inversión que prioriza la inversión social, la movilidad y otros aspectos clave para el desarrollo de la ciudad, en tanto que, a pesar del crecimiento de la estructura administraba, el catorce por ciento corresponde a gastos de funcionamiento y tan solo el dos por ciento, se destina al servicio de la deuda.**
