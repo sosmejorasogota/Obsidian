@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "Marco Conceptual Construyendo Civilidad - Cátedra Bogotá",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -22,11 +22,11 @@ const config: QuartzConfig = {
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
-      typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
-      },
+   typography: {
+  header: "Lora",
+  body: "Lora",
+  code: "IBM Plex Mono",
+},
       colors: {
         lightMode: {
           light: "#faf8f8",

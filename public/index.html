@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>index</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&amp;family=Lora:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Marco Conceptual Construyendo Civilidad - Cátedra Bogotá"/><meta property="og:title" content="index"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="index"/><meta name="twitter:description" content="Componente 1 Cómo conocemos Unidad 1.1 Complejidad y civilidad Sección 1.1.1 Teorías del conocimiento Sección 1.1.2 Estructuras sociales Sección 1.1.3 Sistemas Regulatorios Unidad 1.2 Fundamentos del Estado Sección 1.2.1 Origen del Estado Sección 1.2.2 Fundamentos del Estado Sección 1.2.3 Independe..."/><meta property="og:description" content="Componente 1 Cómo conocemos Unidad 1.1 Complejidad y civilidad Sección 1.1.1 Teorías del conocimiento Sección 1.1.2 Estructuras sociales Sección 1.1.3 Sistemas Regulatorios Unidad 1.2 Fundamentos del Estado Sección 1.2.1 Origen del Estado Sección 1.2.2 Fundamentos del Estado Sección 1.2.3 Independe..."/><meta property="og:image:alt" content="Componente 1 Cómo conocemos Unidad 1.1 Complejidad y civilidad Sección 1.1.1 Teorías del conocimiento Sección 1.1.2 Estructuras sociales Sección 1.1.3 Sistemas Regulatorios Unidad 1.2 Fundamentos del Estado Sección 1.2.1 Origen del Estado Sección 1.2.2 Fundamentos del Estado Sección 1.2.3 Independe..."/><meta property="twitter:domain" content="quartz.jzhao.xyz"/><meta property="og:url" content="https://quartz.jzhao.xyz/index"/><meta property="twitter:url" content="https://quartz.jzhao.xyz/index"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="Componente 1 Cómo conocemos Unidad 1.1 Complejidad y civilidad Sección 1.1.1 Teorías del conocimiento Sección 1.1.2 Estructuras sociales Sección 1.1.3 Sistemas Regulatorios Unidad 1.2 Fundamentos del Estado Sección 1.2.1 Origen del Estado Sección 1.2.2 Fundamentos del Estado Sección 1.2.3 Independe..."/><meta name="generator" content="Quartz"/><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiQzpcXE9ic2lkaWFuIGNsb25cXE9ic2lkaWFuXFxxdWFydHpcXGNvbXBvbmVudHNcXHN0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://quartz.jzhao.xyz/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://quartz.jzhao.xyz/index-og-image.webp"/><meta property="og:image:url" content="https://quartz.jzhao.xyz/index-og-image.webp"/><meta name="twitter:image" content="https://quartz.jzhao.xyz/index-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="index"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"></div><div class="center"><div class="page-header"><div class="popover-hint"><h2 class="page-title"><a href=".">Marco Conceptual Construyendo Civilidad - Cátedra Bogotá</a></h2><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Buscar</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Buscar una palabra de interés" placeholder="Buscar una palabra de interés"/><div class="search-layout" data-preview="true"></div></div></div></div></div></div></div></div><article class="popover-hint"><ul>
+<li><a href="./Componente-1/Componente-1-Cómo-conocemos" class="internal alias" data-slug="Componente-1/Componente-1-Cómo-conocemos">Componente 1 Cómo conocemos</a>
+<ul>
+<li><a href="./Componente-1/Unidad-1.1/Unidad-1.1-Complejidad-y-civilidad" class="internal alias" data-slug="Componente-1/Unidad-1.1/Unidad-1.1-Complejidad-y-civilidad">Unidad 1.1 Complejidad y civilidad</a>
+<ul>
+<li><a href="./Componente-1/Unidad-1.1/Sección-1.1.1-Teorías-del-conocimiento" class="internal alias" data-slug="Componente-1/Unidad-1.1/Sección-1.1.1-Teorías-del-conocimiento">Sección 1.1.1 Teorías del conocimiento</a></li>
+<li><a href="./Componente-1/Unidad-1.1/Sección-1.1.2-Estructuras-sociales" class="internal alias" data-slug="Componente-1/Unidad-1.1/Sección-1.1.2-Estructuras-sociales">Sección 1.1.2 Estructuras sociales</a></li>
+<li><a href="./Componente-1/Unidad-1.1/Sección-1.1.3-Sistemas-Regulatorios" class="internal alias" data-slug="Componente-1/Unidad-1.1/Sección-1.1.3-Sistemas-Regulatorios">Sección 1.1.3 Sistemas Regulatorios</a></li>
+</ul>
+</li>
+<li><a href="./Componente-1/Unidad-1.2/Unidad-1.2-Fundamentos-del-Estado" class="internal alias" data-slug="Componente-1/Unidad-1.2/Unidad-1.2-Fundamentos-del-Estado">Unidad 1.2 Fundamentos del Estado</a>
+<ul>
+<li><a href="./Componente-1/Unidad-1.2/Sección-1.2.1-Origen-del-Estado" class="internal alias" data-slug="Componente-1/Unidad-1.2/Sección-1.2.1-Origen-del-Estado">Sección 1.2.1 Origen del Estado</a></li>
+<li><a href="./Componente-1/Unidad-1.2/Sección-1.2.2-Fundamentos-del-Estado" class="internal alias" data-slug="Componente-1/Unidad-1.2/Sección-1.2.2-Fundamentos-del-Estado">Sección 1.2.2 Fundamentos del Estado</a></li>
+<li><a href="./Componente-1/Unidad-1.2/Sección-1.2.3-Independencia-de-la-Nueva-Granada" class="internal alias" data-slug="Componente-1/Unidad-1.2/Sección-1.2.3-Independencia-de-la-Nueva-Granada">Sección 1.2.3 Independencia de la Nueva Granada</a></li>
+</ul>
+</li>
+<li><a href="./Componente-1/Unidad-1.3/Unidad-1.3-La-organización-del-Estado" class="internal alias" data-slug="Componente-1/Unidad-1.3/Unidad-1.3-La-organización-del-Estado">Unidad 1.3 La organización del Estado</a>
+<ul>
+<li><a href="./Componente-1/Unidad-1.3/Sección-1.3.1-Democracia" class="internal alias" data-slug="Componente-1/Unidad-1.3/Sección-1.3.1-Democracia">Sección 1.3.1 Democracia</a></li>
+<li><a href="./Componente-1/Unidad-1.3/Sección-1.3.2-El-derecho-de-propiedad" class="internal alias" data-slug="Componente-1/Unidad-1.3/Sección-1.3.2-El-derecho-de-propiedad">Sección 1.3.2 El derecho de propiedad</a></li>
+<li><a href="./Componente-1/Unidad-1.3/Sección-1.3.3-La-organización-del-territorio-colombiano" class="internal alias" data-slug="Componente-1/Unidad-1.3/Sección-1.3.3-La-organización-del-territorio-colombiano">Sección 1.3.3 La organización del territorio colombiano</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="./Componente-2/Componente-2-Cómo-nos-organizamos" class="internal alias" data-slug="Componente-2/Componente-2-Cómo-nos-organizamos">Componente 2 Cómo nos organizamos</a>
+<ul>
+<li><a href="./Componente-2/Unidad-2.1/Unidad-2.1-Participación-ciudadana" class="internal alias" data-slug="Componente-2/Unidad-2.1/Unidad-2.1-Participación-ciudadana">Unidad 2.1 Participación ciudadana</a>
+<ul>
+<li><a href="./Componente-2/Unidad-2.1/Sección-2.1.1-Fortalecimiento-de-la-ciudadanía" class="internal alias" data-slug="Componente-2/Unidad-2.1/Sección-2.1.1-Fortalecimiento-de-la-ciudadanía">Sección 2.1.1 Fortalecimiento de la ciudadanía</a></li>
+<li><a href="./Componente-2/Unidad-2.1/Sección-2.1.2-Mecanismos-de-participación-constitucionales" class="internal alias" data-slug="Componente-2/Unidad-2.1/Sección-2.1.2-Mecanismos-de-participación-constitucionales">Sección 2.1.2 Mecanismos de participación constitucionales</a></li>
+<li><a href="./Componente-2/Unidad-2.1/Sección-2.1.3-Participación-ciudadana-en-el-ámbito-distrital" class="internal alias" data-slug="Componente-2/Unidad-2.1/Sección-2.1.3-Participación-ciudadana-en-el-ámbito-distrital">Sección 2.1.3 Participación ciudadana en el ámbito distrital</a></li>
+</ul>
+</li>
+<li><a href="./Unidad-2.2-Estatuto-orgánico" class="internal alias" data-slug="Unidad-2.2-Estatuto-orgánico">Unidad 2.2 Estatuto orgánico</a>
+<ul>
+<li><a href="./Componente-2/Unidad-2.2/Sección-2.2.1-El-gobierno-de-la-ciudad" class="internal alias" data-slug="Componente-2/Unidad-2.2/Sección-2.2.1-El-gobierno-de-la-ciudad">Sección 2.2.1 El gobierno de la ciudad</a></li>
+<li><a href="./Componente-2/Unidad-2.2/Sección-2.2.2-El-estatuto-orgánico-de-Bogotá" class="internal alias" data-slug="Componente-2/Unidad-2.2/Sección-2.2.2-El-estatuto-orgánico-de-Bogotá">Sección 2.2.2 El estatuto orgánico de Bogotá</a></li>
+<li><a href="./Sección-2.2.3-Descentralización" class="internal alias" data-slug="Sección-2.2.3-Descentralización">Sección 2.2.3 Descentralización</a></li>
+</ul>
+</li>
+<li><a href="./Componente-2/Unidad-2.3/Unidad-2.3-Estructura-administrativa" class="internal alias" data-slug="Componente-2/Unidad-2.3/Unidad-2.3-Estructura-administrativa">Unidad 2.3 Estructura administrativa</a>
+<ul>
+<li><a href="./Componente-2/Unidad-2.3/Sección-2.3.1-Estructura-y-organización-del-Distrito" class="internal alias" data-slug="Componente-2/Unidad-2.3/Sección-2.3.1-Estructura-y-organización-del-Distrito">Sección 2.3.1 Estructura y organización del Distrito</a></li>
+<li><a href="./Sección-2.3.2-Organigrama" class="internal alias" data-slug="Sección-2.3.2-Organigrama">Sección 2.3.2 Organigrama</a></li>
+<li><a href="./Componente-2/Unidad-2.3/Sección-2.3.3-Presupuesto-distrital" class="internal alias" data-slug="Componente-2/Unidad-2.3/Sección-2.3.3-Presupuesto-distrital">Sección 2.3.3 Presupuesto distrital</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="./Componente-3/Componente-3-Cuántos-y-quienes-somos" class="internal alias" data-slug="Componente-3/Componente-3-Cuántos-y-quienes-somos">Componente 3 Cuántos y quienes somos</a>
+<ul>
+<li><a href="./Componente-3/Unidad-3.1/Unidad-3.1-La-demografía" class="internal alias" data-slug="Componente-3/Unidad-3.1/Unidad-3.1-La-demografía">Unidad 3.1 La demografía</a>
+<ul>
+<li><a href="./Sección-3.1.1-Demografía" class="internal alias" data-slug="Sección-3.1.1-Demografía">Sección 3.1.1 Demografía</a></li>
+<li><a href="./Sección-3.1.2-Estructura-de-la-población" class="internal alias" data-slug="Sección-3.1.2-Estructura-de-la-población">Sección 3.1.2 Estructura de la población</a></li>
+<li><a href="./Sección-3.1.3-Indicadores" class="internal alias" data-slug="Sección-3.1.3-Indicadores">Sección 3.1.3 Indicadores</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="./Componente-4/Componente-4-Dónde-habitamos" class="internal alias" data-slug="Componente-4/Componente-4-Dónde-habitamos">Componente 4 Dónde habitamos</a>
+<ul>
+<li><a href="./Componente-4/Unidad-4.1/Unidad-4.1-La-geografía-humana-del-territorio" class="internal alias" data-slug="Componente-4/Unidad-4.1/Unidad-4.1-La-geografía-humana-del-territorio">Unidad 4.1 La geografía humana del territorio</a>
+<ul>
+<li><a href="./Sección-4.1.1-Geografía;-las-ciencias-naturales-y-características-físicas-del-territorio" class="internal alias" data-slug="Sección-4.1.1-Geografía;-las-ciencias-naturales-y-características-físicas-del-territorio">Sección 4.1.1 Geografía; las ciencias naturales y características físicas del territorio</a></li>
+<li><a href="./Sección-4.1.2-Sistemas-de-información-geográfica" class="internal alias" data-slug="Sección-4.1.2-Sistemas-de-información-geográfica">Sección 4.1.2 Sistemas de información geográfica</a></li>
+<li><a href="./Sección-4.1.3-Las-relaciones-y-determinantes-ambientales-del-Territorio" class="internal alias" data-slug="Sección-4.1.3-Las-relaciones-y-determinantes-ambientales-del-Territorio">Sección 4.1.3 Las relaciones y determinantes ambientales del Territorio</a></li>
+</ul>
+</li>
+<li><a href="./Componente-4/Unidad-4.2/Unidad-4.2-Paisaje,-identidad-y-sostenibilidad-territorial" class="internal alias" data-slug="Componente-4/Unidad-4.2/Unidad-4.2-Paisaje,-identidad-y-sostenibilidad-territorial">Unidad 4.2 Paisaje, identidad y sostenibilidad territorial</a>
+<ul>
+<li><a href="./Componente-4/Unidad-4.2/Sección-4.2.1-Patrimonio-natural-e-histórico-del-Territorio" class="internal alias" data-slug="Componente-4/Unidad-4.2/Sección-4.2.1-Patrimonio-natural-e-histórico-del-Territorio">Sección 4.2.1 Patrimonio natural e histórico del Territorio</a></li>
+<li><a href="./Componente-4/Unidad-4.2/Sección-4.2.2-Conflictos-socioecológicos-y-justicia-ambiental" class="internal alias" data-slug="Componente-4/Unidad-4.2/Sección-4.2.2-Conflictos-socioecológicos-y-justicia-ambiental">Sección 4.2.2 Conflictos socioecológicos y justicia ambiental</a></li>
+<li><a href="./Componente-4/Unidad-4.2/Sección-4.2.3-Evolución-del-paisaje-y-de-la-sostenibilidad" class="internal alias" data-slug="Componente-4/Unidad-4.2/Sección-4.2.3-Evolución-del-paisaje-y-de-la-sostenibilidad">Sección 4.2.3 Evolución del paisaje y de la sostenibilidad</a></li>
+</ul>
+</li>
+<li><a href="./Componente-4/Unidad-4.3/Unidad-4.3-Evolución,-ordenamiento-y-clasificación-del-territorio" class="internal alias" data-slug="Componente-4/Unidad-4.3/Unidad-4.3-Evolución,-ordenamiento-y-clasificación-del-territorio">Unidad 4.3 Evolución, ordenamiento y clasificación del territorio</a>
+<ul>
+<li><a href="./Componente-4/Unidad-4.3/Sección-4.3.1-Marco-jurídico-de-desarrollo-y-Ordenamiento-Territorial" class="internal alias" data-slug="Componente-4/Unidad-4.3/Sección-4.3.1-Marco-jurídico-de-desarrollo-y-Ordenamiento-Territorial">Sección 4.3.1 Marco jurídico de desarrollo y Ordenamiento Territorial</a>]</li>
+<li><a href="./Componente-4/Unidad-4.3/Sección-4.3.2-La-Región-hídrica-de-Bogotá-y-su-Estructura-Ecológica-Principal" class="internal alias" data-slug="Componente-4/Unidad-4.3/Sección-4.3.2-La-Región-hídrica-de-Bogotá-y-su-Estructura-Ecológica-Principal">Sección 4.3.2 La Región hídrica de Bogotá y su Estructura Ecológica Principal</a></li>
+<li><a href="./Componente-4/Unidad-4.3/Sección-4.3.3-Evolución-de-la-ocupación-del-territorio" class="internal alias" data-slug="Componente-4/Unidad-4.3/Sección-4.3.3-Evolución-de-la-ocupación-del-territorio">Sección 4.3.3 Evolución de la ocupación del territorio</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="./Componente-5-Cómo-vivimos" class="internal alias" data-slug="Componente-5-Cómo-vivimos">Componente 5 Cómo vivimos</a>
+<ul>
+<li><a href="./Unidad-5.1-Infraestructura" class="internal alias" data-slug="Unidad-5.1-Infraestructura">Unidad 5.1 Infraestructura</a>
+<ul>
+<li><a href="./Componente-5/Unidad-5.1/Sección-5.1.1-Historia-del-Sistema-de-Acueducto-y-Alcantarillado" class="internal alias" data-slug="Componente-5/Unidad-5.1/Sección-5.1.1-Historia-del-Sistema-de-Acueducto-y-Alcantarillado">Sección 5.1.1 Historia del Sistema de Acueducto y Alcantarillado</a></li>
+<li><a href="./Componente-5/Unidad-5.1/Sección-5.1.2-Gestión-del-agua-para-la-sostenibilidad-territorial" class="internal alias" data-slug="Componente-5/Unidad-5.1/Sección-5.1.2-Gestión-del-agua-para-la-sostenibilidad-territorial">Sección 5.1.2 Gestión del agua para la sostenibilidad territorial</a></li>
+<li><a href="./Componente-5/Unidad-5.1/Sección-5.1.3-Modelo-del-Sistema-de-Acueducto-de-Bogotá" class="internal alias" data-slug="Componente-5/Unidad-5.1/Sección-5.1.3-Modelo-del-Sistema-de-Acueducto-de-Bogotá">Sección 5.1.3 Modelo del Sistema de Acueducto de Bogotá</a></li>
+</ul>
+</li>
+<li><a href="./Unidad-5.2-Equipamientos" class="internal alias" data-slug="Unidad-5.2-Equipamientos">Unidad 5.2 Equipamientos</a>
+<ul>
+<li><a href="./Sección-5.2.1-Educación" class="internal alias" data-slug="Sección-5.2.1-Educación">Sección 5.2.1 Educación</a></li>
+<li><a href="./Sección-5.2.2-Salud" class="internal alias" data-slug="Sección-5.2.2-Salud">Sección 5.2.2 Salud</a></li>
+<li><a href="./Sección-5.2.3-Recreación,-cultura-y-culto" class="internal alias" data-slug="Sección-5.2.3-Recreación,-cultura-y-culto">Sección 5.2.3 Recreación, cultura y culto</a></li>
+</ul>
+</li>
+<li><a href="./Unidad-5.3-Vivienda" class="internal alias" data-slug="Unidad-5.3-Vivienda">Unidad 5.3 Vivienda</a>
+<ul>
+<li><a href="./Sección-5.3.1-Antecedentes" class="internal alias" data-slug="Sección-5.3.1-Antecedentes">Sección 5.3.1 Antecedentes</a></li>
+<li><a href="./Sección-5.3.2-Planimetría" class="internal alias" data-slug="Sección-5.3.2-Planimetría">Sección 5.3.2 Planimetría</a></li>
+<li><a href="./Sección-5.3.3-Ejemplos-e-indicadores" class="internal alias" data-slug="Sección-5.3.3-Ejemplos-e-indicadores">Sección 5.3.3 Ejemplos e indicadores</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="./Componente-6-Cómo-nos-proyectamos" class="internal alias" data-slug="Componente-6-Cómo-nos-proyectamos">Componente 6 Cómo nos proyectamos</a>
+<ul>
+<li><a href="./Unidad-6.1-Leyes-de-ordenamiento-territorial" class="internal alias" data-slug="Unidad-6.1-Leyes-de-ordenamiento-territorial">Unidad 6.1 Leyes de ordenamiento territorial</a>
+<ul>
+<li><a href="./Sección-6.1.1-Antecedentes" class="internal alias" data-slug="Sección-6.1.1-Antecedentes">Sección 6.1.1 Antecedentes</a></li>
+<li><a href="./Sección-6.1.2-La-ley-388-de-1997" class="internal alias" data-slug="Sección-6.1.2-La-ley-388-de-1997">Sección 6.1.2 La ley 388 de 1997</a></li>
+<li><a href="./Sección-6.1.3-Decreto-618-de-2000-y-decreto-190" class="internal alias" data-slug="Sección-6.1.3-Decreto-618-de-2000-y-decreto-190">Sección 6.1.3 Decreto 618 de 2000 y decreto 190</a></li>
+</ul>
+</li>
+<li><a href="./Unidad-6.2-Historia-de-la-planeación-en-Bogotá" class="internal alias" data-slug="Unidad-6.2-Historia-de-la-planeación-en-Bogotá">Unidad 6.2 Historia de la planeación en Bogotá</a>
+<ul>
+<li><a href="./Sección-6.2.1-Del-acuerdo-10-de-1902,-el-plan-piloto" class="internal alias" data-slug="Sección-6.2.1-Del-acuerdo-10-de-1902,-el-plan-piloto">Sección 6.2.1 Del acuerdo 10 de 1902, el plan piloto</a></li>
+<li><a href="./Sección-6.2.2-La-Fase-II-y-los-acuerdos-7de-1979--y-6-de-1990" class="internal alias" data-slug="Sección-6.2.2-La-Fase-II-y-los-acuerdos-7de-1979--y-6-de-1990">Sección 6.2.2 La Fase II y los acuerdos 7de 1979  y 6 de 1990</a></li>
+<li><a href="./Sección-6.2.3-Decreto-618-de-2000,-decreto-190" class="internal alias" data-slug="Sección-6.2.3-Decreto-618-de-2000,-decreto-190">Sección 6.2.3 Decreto 618 de 2000, decreto 190</a></li>
+</ul>
+</li>
+<li><a href="./Unidad-6.3-El-POT-de-Bogotá" class="internal alias" data-slug="Unidad-6.3-El-POT-de-Bogotá">Unidad 6.3 El POT de Bogotá</a>
+<ul>
+<li><a href="./Sección-6.3.1-Glosarios" class="internal alias" data-slug="Sección-6.3.1-Glosarios">Sección 6.3.1 Glosarios</a></li>
+<li><a href="./Sección-6.3.2-Política,-planes-y-programas" class="internal alias" data-slug="Sección-6.3.2-Política,-planes-y-programas">Sección 6.3.2 Política, planes y programas</a></li>
+<li><a href="./Sección-6.3.3-La-normatividad" class="internal alias" data-slug="Sección-6.3.3-La-normatividad">Sección 6.3.3 La normatividad</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph home-graph"><h3>Vista de grafo</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.15,&quot;centerForce&quot;:0.02,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.22,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:2.2,&quot;repelForce&quot;:2.5,&quot;centerForce&quot;:0.02,&quot;linkDistance&quot;:80,&quot;fontSize&quot;:0.45,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:false}"></div></div></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">
+        const socket = new WebSocket('ws://localhost:3001')
+        // reload(true) ensures resources like images and scripts are fetched again in firefox
+        socket.addEventListener('message', () => document.location.reload(true))
+      </script><script src="./postscript.js" type="module" data-persist="true"></script></html>

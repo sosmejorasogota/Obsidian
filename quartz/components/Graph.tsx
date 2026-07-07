@@ -60,11 +60,12 @@ const defaultOptions: GraphOptions = {
 }
 
 export default ((opts?: Partial<GraphOptions>) => {
-  const Graph: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
+const Graph: QuartzComponent = ({ displayClass, cfg, fileData }: QuartzComponentProps) => {
     const localGraph = { ...defaultOptions.localGraph, ...opts?.localGraph }
     const globalGraph = { ...defaultOptions.globalGraph, ...opts?.globalGraph }
+     const isHomePage = fileData.slug === "index"
     return (
-      <div class={classNames(displayClass, "graph")}>
+      <div class={classNames(displayClass, "graph", isHomePage ? "home-graph" : "")}>
         <h3>{i18n(cfg.locale).components.graph.title}</h3>
         <div class="graph-outer">
           <div class="graph-container" data-cfg={JSON.stringify(localGraph)}></div>

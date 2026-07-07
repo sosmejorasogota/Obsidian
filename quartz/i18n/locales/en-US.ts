@@ -22,8 +22,8 @@ export default {
       quote: "Quote",
     },
     backlinks: {
-      title: "Backlinks",
-      noBacklinksFound: "No backlinks found",
+      title: "Enlaces",
+      noBacklinksFound: "No hay enlaces",
     },
     themeToggle: {
       lightMode: "Light mode",
@@ -39,7 +39,7 @@ export default {
       createdWith: "Created with",
     },
     graph: {
-      title: "Graph View",
+      title: "Vista de grafo",
     },
     recentNotes: {
       title: "Recent Notes",
@@ -50,11 +50,11 @@ export default {
       linkToOriginal: "Link to original",
     },
     search: {
-      title: "Search",
-      searchBarPlaceholder: "Search for something",
+      title: "Buscar",
+      searchBarPlaceholder: "Buscar una palabra de interés",
     },
     tableOfContents: {
-      title: "Table of Contents",
+      title: "Tabla de contenidos",
     },
     contentMeta: {
       readingTime: ({ minutes }) => `${minutes} min read`,

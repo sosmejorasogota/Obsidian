@@ -58,6 +58,7 @@
       background-color: var(--light);
       border-radius: 5px;
       box-sizing: border-box;
+      overflow: hidden;
       position: fixed;
       top: 50%;
       left: 50%;
@@ -69,5 +70,13 @@
         width: 90%;
       }
     }
+  }
+}
+.home-graph {
+  width: 100%;
+
+  .graph-outer {
+    height: 600px;
+    width: 100%;
   }
 }
