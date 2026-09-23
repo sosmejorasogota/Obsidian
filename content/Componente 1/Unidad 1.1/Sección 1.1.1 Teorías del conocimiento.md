@@ -152,7 +152,7 @@ El arte permite expresar de forma sencilla los pensamientos más complejos.
 
 ---
 
-[[Sección 1.1.2 La complejidad de las relaciones sociales]]
+[[Sección 1.1.2 Necesidad de las normas sociales]]
 [[Sección 1.1.3 Sistemas regulatorios y civilidad]]
 [[Sección 2.1.3 Código Nacional de Seguridad y Convivencia Ciudadana - Ley 1801 de 2016]]
 [[Unidad 3.1 La demografía]]

@@ -5,7 +5,7 @@ title: Tabla de contenido
 - [[Componente 1 Cómo conocemos]]
 	- [[Unidad 1.1 Complejidad de las relaciones sociales]]
 		- [[Sección 1.1.1 Teorías del conocimiento]]
-		- [[Sección 1.1.2 La complejidad de las relaciones sociales]]
+		- [[Sección 1.1.2 Necesidad de las normas sociales]]
 		- [[Sección 1.1.3 Sistemas regulatorios y civilidad]]
 	- [[Unidad 1.2 El Estado, una organización especialmente compleja]]
 		- [[Sección 1.2.1 Características del estado]]

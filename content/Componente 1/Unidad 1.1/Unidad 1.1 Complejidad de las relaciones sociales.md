@@ -1,6 +1,6 @@
 [[Componente 1 Cómo conocemos]]
 - [Sección 1.1.1 Teorías del conocimiento](obsidian://open?vault=C%C3%A1tedraBogot%C3%A1&file=Secci%C3%B3n%201.1.1%20Teor%C3%ADas%20del%20conocimiento)
-- [Sección 1.1.2 La complejidad de las relaciones sociales](obsidian://open?vault=C%C3%A1tedraBogot%C3%A1&file=Secci%C3%B3n%201.1.2%20La%20complejidad%20de%20las%20relaciones%20sociales)
+- [Sección 1.1.2 Necesidad de las normas sociales](obsidian://open?vault=C%C3%A1tedraBogot%C3%A1&file=Secci%C3%B3n%201.1.2%20Necesidad%20de%20las%20normas%20sociales)
 - [Sección 1.1.3 Sistemas regulatorios y civilidad](obsidian://open?vault=C%C3%A1tedraBogot%C3%A1&file=Secci%C3%B3n%201.1.3%20Sistemas%20regulatorios%20y%20civilidad)
 
 La ciudad constituye una de las creaciones más complejas construida por el hombre, y Bogotá no es la excepción. Comprenderla de manera integral exige articular múltiples disciplinas, emplear metodologías diversas y adoptar una perspectiva capaz de reconocer las dimensiones que configuran la realidad urbana. En un contexto cada vez más interconectado, resulta indispensable comprender cómo se produce el conocimiento, cómo dialogan las distintas perspectivas para interpretar la realidad y de qué manera dicho conocimiento se adquiere, organiza y aplica.

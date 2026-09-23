@@ -6,7 +6,7 @@ const p = new DOMParser()
 let activeAnchor: HTMLAnchorElement | null = null
 
 function handleObsidianURI(event: MouseEvent) {
-  const link = (event.currentTarget as HTMLAnchorElement)
+  const link = event.currentTarget as HTMLAnchorElement
 
   if (!link.href.startsWith("obsidian://open")) {
     return
@@ -35,9 +35,16 @@ function handleObsidianURI(event: MouseEvent) {
     }
 
     const [slug] = entry
-    const targetUrl = new URL(`${window.location.origin}${window.location.pathname}`)
 
-    targetUrl.pathname = `/${slug}`
+    // En GitHub Pages el sitio está publicado dentro de /Obsidian/
+    // En localhost no existe ese prefijo.
+    const basePath = window.location.pathname.startsWith("/Obsidian/")
+      ? "/Obsidian"
+      : ""
+
+    const targetUrl = new URL(window.location.href)
+
+    targetUrl.pathname = `${basePath}/${slug}`.replace(/\/+/g, "/")
 
     window.spaNavigate(targetUrl)
   })
