@@ -1,0 +1,8 @@
+[[Componente 4 Dónde habitamos]]
+- [Sección 4.1.1 Geografía, las ciencias naturales y características físicas del territorio](obsidian://open?vault=C%C3%A1tedraBogot%C3%A1&file=Secci%C3%B3n%204.1.1%20Geograf%C3%ADa%2C%20las%20ciencias%20naturales%20y%20caracter%C3%ADsticas%20f%C3%ADsicas%20del%20territorio)
+- [Sección 4.1.2 Sistemas de Información Geográfica](obsidian://open?vault=C%C3%A1tedraBogot%C3%A1&file=Secci%C3%B3n%204.1.2%20Sistemas%20de%20Informaci%C3%B3n%20Geogr%C3%A1fica)
+- [Sección 4.1.3 Las relaciones y determinantes ambientales del territorio](obsidian://open?vault=C%C3%A1tedraBogot%C3%A1&file=Secci%C3%B3n%204.1.3%20Las%20relaciones%20y%20determinantes%20ambientales%20del%20territorio)
+
+Esta Unidad busca avanzar en el conocimiento del contexto geográfico de la Bogotá urbana y rural, y las características físicas y naturales del territorio a través del análisis y el reconocimiento de las interrelaciones de las diferentes dimensiones geográficas y con base a las determinantes biofísicas del territorio sobre los actores humanos y no humanos, utilizando los Sistemas de Información Geográfica-SIG.
+
+El análisis territorial requiere del conocimiento acerca de conceptos de las disciplinas que estudian el clima, el agua, el aire, las montañas, los suelos y los ecosistemas, así como las relaciones entre estas. Para interpretar adecuadamente las realidades y características físicas territoriales, y las limitaciones que estas determinan al humano, la sociedad y al desarrollo, se parte desde el contexto propio, pero teniendo en cuenta las perspectivas de otros actores no humanos del territorio. Así se desarrollan competencias para aportar a la cultura, el paisaje, el ordenamiento territorial, la gestión de riesgos de desastres y la civilidad.

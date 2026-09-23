@@ -207,27 +207,31 @@ const height = Math.max(outer.offsetHeight, 250)
 
   // componente 1
   if (id.includes("componente-1") || id.includes("componente 1")) {
-    return "#6A5A41"
+    return "#6B5A41"
   }
 
   // componente 2
   if (id.includes("componente-2") || id.includes("componente 2")) {
-    return "#868788"
+    return "#6d6f70"
   }
 
   // componente 3
   if (id.includes("componente-3") || id.includes("componente 3")) {
-    return "#7B341A"
+    return "#85361b"
   }
 
   // componente 4
   if (id.includes("componente-4") || id.includes("componente 4")) {
-    return "#A46826"
+    return "#AE6E28"
   }
 
   // componente 5
   if (id.includes("componente-5") || id.includes("componente 5")) {
-    return "#C79E26"
+    return "#D6AA28"
+  }
+    // componente 6
+  if (id.includes("componente-6") || id.includes("componente 6")) {
+    return "#E2AE69"
   }
 
   // tags
@@ -244,17 +248,17 @@ const height = Math.max(outer.offsetHeight, 250)
 
   // Secciones (más pequeñas)
   if (id.includes("sección") || id.includes("seccion")) {
-    return 1.5
+    return 1
   }
 
   // Unidades (medianas)
   if (id.includes("unidad")) {
-    return 3
+    return 2
   }
 
   // Componentes (grandes)
   if (id.includes("componente")) {
-    return 5
+    return 4
   }
 
   // Otros nodos
@@ -298,72 +302,182 @@ const height = Math.max(outer.offsetHeight, 250)
   let dragStartTime = 0
   let dragging = false
 
-  function renderLinks() {
-    tweens.get("link")?.stop()
-    const tweenGroup = new TweenGroup()
+function renderLinks() {
+  tweens.get("link")?.stop()
+  const tweenGroup = new TweenGroup()
 
-    for (const l of linkRenderData) {
-      let alpha = 1
+  for (const l of linkRenderData) {
+    let alpha = 1
 
-      // if we are hovering over a node, we want to highlight the immediate neighbours
-      // with full alpha and the rest with default alpha
-      if (hoveredNodeId) {
-        alpha = l.active ? 0.65 : 0.08
-      }
-
-      l.color = l.active ? "#7046d2": computedStyleMap["--lightgray"]
-      tweenGroup.add(new Tweened<LinkRenderData>(l).to({ alpha }, 200))
+    // if we are hovering over a node, we want to highlight the immediate neighbours
+    // with full alpha and the rest with default alpha
+    if (hoveredNodeId) {
+      alpha = l.active ? 0.65 : 0.08
     }
 
-    tweenGroup.getAll().forEach((tw) => tw.start())
-    tweens.set("link", {
-      update: tweenGroup.update.bind(tweenGroup),
-      stop() {
-        tweenGroup.getAll().forEach((tw) => tw.stop())
-      },
-    })
-  }
+        const linkData = l.simulationData
 
-  function renderLabels() {
-    tweens.get("label")?.stop()
-    const tweenGroup = new TweenGroup()
+    const sourceIsIndex =
+      linkData.source.id === "index" ||
+      data.get(linkData.source.id)?.title === "Tabla de contenido"
 
-    const defaultScale = 1 / scale
-    const activeScale = defaultScale * 1.1
-    for (const n of nodeRenderData) {
-      const nodeId = n.simulationData.id
+    const targetIsIndex =
+      linkData.target.id === "index" ||
+      data.get(linkData.target.id)?.title === "Tabla de contenido"
 
-      if (hoveredNodeId === nodeId) {
-        tweenGroup.add(
-          new Tweened<Text>(n.label).to(
-            {
-              alpha: 1,
-              scale: { x: activeScale, y: activeScale },
-            },
-            100,
-          ),
-        )
-      } else {
-        tweenGroup.add(
-          new Tweened<Text>(n.label).to(
-            {
-              alpha: n.label.alpha,
-              scale: { x: defaultScale, y: defaultScale },
-            },
-            100,
-          ),
-        )
+    const isIndexLink = sourceIsIndex || targetIsIndex
+
+    if (isIndexLink) {
+      // Los vínculos de la tabla de contenido existen,
+      // pero no se muestran visualmente.
+      l.color = computedStyleMap["--lightgray"]
+      alpha = 0
+    } else if (hoveredNodeId && l.active) {
+      // Enlace que SALE del nodo actual
+      if (linkData.source.id === hoveredNodeId) {
+        l.color = "#16db3d"
       }
+
+      // Enlace que LLEGA al nodo actual
+      else if (linkData.target.id === hoveredNodeId) {
+        l.color = "#fc4108"
+      }
+    } else {
+      l.color = computedStyleMap["--lightgray"]
     }
 
-    tweenGroup.getAll().forEach((tw) => tw.start())
-    tweens.set("label", {
-      update: tweenGroup.update.bind(tweenGroup),
-      stop() {
-        tweenGroup.getAll().forEach((tw) => tw.stop())
-      },
-    })
+    tweenGroup.add(new Tweened<LinkRenderData>(l).to({ alpha }, 200))
   }
+
+  tweenGroup.getAll().forEach((tw) => tw.start())
+  tweens.set("link", {
+    update: tweenGroup.update.bind(tweenGroup),
+    stop() {
+      tweenGroup.getAll().forEach((tw) => tw.stop())
+    },
+  })
+}
+
+function renderLabels() {
+  tweens.get("label")?.stop()
+  const tweenGroup = new TweenGroup()
+
+  const defaultScale = 1 / scale
+  const activeScale = defaultScale * 1.1
+
+  type LabelBox = {
+    left: number
+    right: number
+    top: number
+    bottom: number
+  }
+
+  const visibleLabelIds = new Set<string>()
+  const visibleLabelBoxes: LabelBox[] = []
+
+  function getLabelBox(n: NodeRenderData): LabelBox {
+    const bounds = n.label.getLocalBounds()
+
+    const width = bounds.width / scale
+    const height = bounds.height / scale
+
+    const x = n.simulationData.x ?? 0
+    const y = n.simulationData.y ?? 0
+
+    return {
+      left: x - width / 2,
+      right: x + width / 2,
+      top: y - height * 1.2,
+      bottom: y - height * 0.2,
+    }
+  }
+
+  function boxesOverlap(a: LabelBox, b: LabelBox) {
+    const padding = 2
+
+    return !(
+      a.right + padding < b.left ||
+      a.left - padding > b.right ||
+      a.bottom + padding < b.top ||
+      a.top - padding > b.bottom
+    )
+  }
+
+  // Solo mostrar etiquetas cuando hay un nodo seleccionado
+  if (hoveredNodeId !== null) {
+    const hoveredNode = nodeRenderData.find(
+      (n) => n.simulationData.id === hoveredNodeId,
+    )
+
+    // Primero siempre mostramos el nodo sobre el que está el cursor
+    if (hoveredNode) {
+      visibleLabelIds.add(hoveredNodeId)
+      visibleLabelBoxes.push(getLabelBox(hoveredNode))
+    }
+
+    // Después intentamos mostrar los vecinos, evitando superposiciones
+    const neighbourNodes = nodeRenderData
+      .filter(
+        (n) =>
+          n.simulationData.id !== hoveredNodeId &&
+          hoveredNeighbours.has(n.simulationData.id),
+      )
+      .sort((a, b) => {
+        const ax = a.simulationData.x ?? 0
+        const ay = a.simulationData.y ?? 0
+        const bx = b.simulationData.x ?? 0
+        const by = b.simulationData.y ?? 0
+
+        const hx = hoveredNode?.simulationData.x ?? 0
+        const hy = hoveredNode?.simulationData.y ?? 0
+
+        const distanceA = Math.hypot(ax - hx, ay - hy)
+        const distanceB = Math.hypot(bx - hx, by - hy)
+
+        return distanceA - distanceB
+      })
+
+    for (const n of neighbourNodes) {
+      const box = getLabelBox(n)
+
+      const overlapsExisting = visibleLabelBoxes.some((existingBox) =>
+        boxesOverlap(box, existingBox),
+      )
+
+      if (!overlapsExisting) {
+        visibleLabelIds.add(n.simulationData.id)
+        visibleLabelBoxes.push(box)
+      }
+    }
+  }
+
+  for (const n of nodeRenderData) {
+    const nodeId = n.simulationData.id
+    const isHovered = hoveredNodeId === nodeId
+    const shouldShowLabel = visibleLabelIds.has(nodeId)
+
+    tweenGroup.add(
+      new Tweened<Text>(n.label).to(
+        {
+          alpha: shouldShowLabel ? 1 : 0,
+          scale: {
+            x: isHovered ? activeScale : defaultScale,
+            y: isHovered ? activeScale : defaultScale,
+          },
+        },
+        100,
+      ),
+    )
+  }
+
+  tweenGroup.getAll().forEach((tw) => tw.start())
+  tweens.set("label", {
+    update: tweenGroup.update.bind(tweenGroup),
+    stop() {
+      tweenGroup.getAll().forEach((tw) => tw.stop())
+    },
+  })
+}
 
   function renderNodes() {
     tweens.get("hover")?.stop()
@@ -430,7 +544,7 @@ const height = Math.max(outer.offsetHeight, 250)
       alpha: 0,
       anchor: { x: 0.5, y: 1.2 },
       style: {
-        fontSize: fontSize * 15,
+        fontSize: fontSize * 10,
         fill: computedStyleMap["--dark"],
         fontFamily: computedStyleMap["--bodyFont"],
       },
@@ -567,15 +681,68 @@ if (!graph.classList.contains("graph-container")) {
   scaleOpacity = Math.max((scale - 1.8) / 2.5, 0)
 }
 
-      const activeNodes = nodeRenderData
-        .filter((n) => n.active)
-        .flatMap((n) => n.label)
+if (hoveredNodeId === null && !graph.classList.contains("graph-container")) {
+  // Grafo global sin nodo seleccionado:
+  // mostrar solo las etiquetas que no se superponen.
+  const sortedNodes = [...nodeRenderData].sort(
+    (a, b) =>
+      nodeRadius(b.simulationData) - nodeRadius(a.simulationData),
+  )
 
-      for (const label of labelsContainer.children) {
-        if (!activeNodes.includes(label)) {
-          label.alpha = scaleOpacity
-        }
-      }
+  const visibleLabels = new Set<Text>()
+  const occupiedBoxes: {
+    left: number
+    right: number
+    top: number
+    bottom: number
+  }[] = []
+
+  for (const n of sortedNodes) {
+    if (scaleOpacity <= 0) {
+      break
+    }
+
+    const bounds = n.label.getBounds()
+    const padding = 8
+
+    const box = {
+      left: bounds.x - padding,
+      right: bounds.x + bounds.width + padding,
+      top: bounds.y - padding,
+      bottom: bounds.y + bounds.height + padding,
+    }
+
+    const overlaps = occupiedBoxes.some(
+      (existing) =>
+        !(
+          box.right < existing.left ||
+          box.left > existing.right ||
+          box.bottom < existing.top ||
+          box.top > existing.bottom
+        ),
+    )
+
+    if (!overlaps) {
+      visibleLabels.add(n.label)
+      occupiedBoxes.push(box)
+    }
+  }
+
+  for (const n of nodeRenderData) {
+    n.label.alpha = visibleLabels.has(n.label) ? scaleOpacity : 0
+  }
+} else {
+  // Mantener el comportamiento actual cuando se selecciona un nodo
+  const activeNodes = nodeRenderData
+    .filter((n) => n.active)
+    .flatMap((n) => n.label)
+
+  for (const label of labelsContainer.children) {
+    if (!activeNodes.includes(label)) {
+      label.alpha = scaleOpacity
+    }
+  }
+}
     })
 
   const canvas = select<HTMLCanvasElement, NodeData>(app.canvas)
@@ -616,7 +783,7 @@ if (!graph.classList.contains("graph-container")) {
       l.gfx.moveTo(linkData.source.x! + width / 2, linkData.source.y! + height / 2)
       l.gfx
         .lineTo(linkData.target.x! + width / 2, linkData.target.y! + height / 2)
-        .stroke({alpha: l.alpha,width: l.active ? 1.2 : 0.35,color: l.color,})
+        .stroke({alpha: l.alpha,width: l.active ? 0.7 : 0.35,color: l.color,})
     }
 
     tweens.forEach((t) => t.update(time))

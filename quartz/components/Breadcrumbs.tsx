@@ -58,20 +58,47 @@ export default ((opts?: Partial<BreadcrumbOptions>) => {
       return null
     }
 
-    const crumbs: CrumbData[] = pathNodes.map((node, idx) => {
-      const crumb = formatCrumb(node.displayName, fileData.slug!, simplifySlug(node.slug))
-      if (idx === 0) {
-        crumb.displayName = options.rootName
+  const crumbs: CrumbData[] = pathNodes.map((node, idx) => {
+  const crumb = formatCrumb(
+    node.displayName,
+    fileData.slug!,
+    simplifySlug(node.slug),
+  )
+
+  if (idx === 0) {
+    crumb.displayName = options.rootName
+  }
+
+  // Si el nodo corresponde a una carpeta intermedia,
+  // buscar la página que representa esa carpeta.
+  if (node.isFolder && idx < pathNodes.length - 1) {
+    const folderName = node.displayName.trim().toLowerCase()
+
+    const folderPage = node.children.find((child) => {
+      if (!child.data) {
+        return false
       }
 
-      // For last node (current page), set empty path
-      if (idx === pathNodes.length - 1) {
-        crumb.path = ""
-      }
+      const title = (child.data.title ?? "").trim().toLowerCase()
 
-      return crumb
+      return title.startsWith(folderName)
     })
 
+    if (folderPage) {
+      crumb.path = resolveRelative(
+        fileData.slug!,
+        simplifySlug(folderPage.slug),
+      )
+    }
+  }
+
+  // Para la página actual, no crear enlace
+  if (idx === pathNodes.length - 1) {
+    crumb.path = ""
+  }
+
+  return crumb
+})
     if (!options.showCurrentPage) {
       crumbs.pop()
     }

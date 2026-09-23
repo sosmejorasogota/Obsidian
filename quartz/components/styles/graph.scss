@@ -80,3 +80,53 @@
     width: 100%;
   }
 }
+
+.graph-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.graph-header h3 {
+  margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.graph-legend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+}
+
+.graph-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  white-space: nowrap;
+}
+
+.graph-legend-line {
+  display: inline-block;
+  width: 24px;
+  height: 3px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.graph-legend-prev {
+  background-color: #ff7357;
+}
+
+.graph-legend-next {
+  background-color: #40e878;
+}

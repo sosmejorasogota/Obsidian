@@ -1,0 +1,3 @@
+[Unidad 5.2 Estructura urbana](obsidian://open?vault=C%C3%A1tedraBogot%C3%A1&file=Unidad%205.2%20Estructura%20urbana)
+
+La presente Sección será desarrollada en un documento independiente, dada la amplitud y especificidad de las dinámicas que comprende el sistema productivo y económico del territorio. Su abordaje contempla el análisis de los principales sectores que estructuran estas dinámicas, particularmente el **comercio, la industria y los servicios**, considerando sus características, distribución y comportamiento como componentes fundamentales de la estructura económica territorial.

@@ -50,7 +50,7 @@ const defaultOptions: GraphOptions = {
   repelForce: 2.5,
   centerForce: 0.02,
   linkDistance: 80,
-  fontSize: 0.45,
+  fontSize: 1.2,
   opacityScale: 1,
   showTags: true,
   removeTags: [],
@@ -65,9 +65,24 @@ const Graph: QuartzComponent = ({ displayClass, cfg, fileData }: QuartzComponent
     const globalGraph = { ...defaultOptions.globalGraph, ...opts?.globalGraph }
      const isHomePage = fileData.slug === "index"
     return (
-      <div class={classNames(displayClass, "graph", isHomePage ? "home-graph" : "")}>
-        <h3>{i18n(cfg.locale).components.graph.title}</h3>
-        <div class="graph-outer">
+     <div class={classNames(displayClass, "graph", isHomePage ? "home-graph" : "")}>
+     <div class="graph-header">
+     <h3>{i18n(cfg.locale).components.graph.title}</h3>
+
+     <div class="graph-legend">
+      <div class="graph-legend-item">
+        <span class="graph-legend-line graph-legend-prev"></span>
+        <span>Contenidos previos sugeridos</span>
+      </div>
+
+      <div class="graph-legend-item">
+        <span class="graph-legend-line graph-legend-next"></span>
+        <span>Contenidos próximos sugeridos</span>
+      </div>
+      </div>
+   </div>
+
+  <div class="graph-outer">
           <div class="graph-container" data-cfg={JSON.stringify(localGraph)}></div>
           <button class="global-graph-icon" aria-label="Global Graph">
             <svg

@@ -5,22 +5,27 @@ const svgCheck =
 
 document.addEventListener("nav", () => {
   const els = document.getElementsByTagName("pre")
+
   for (let i = 0; i < els.length; i++) {
     const codeBlock = els[i].getElementsByTagName("code")[0]
+
     if (codeBlock) {
       const source = (
         codeBlock.dataset.clipboard ? JSON.parse(codeBlock.dataset.clipboard) : codeBlock.innerText
       ).replace(/\n\n/g, "\n")
+
       const button = document.createElement("button")
       button.className = "clipboard-button"
       button.type = "button"
       button.innerHTML = svgCopy
       button.ariaLabel = "Copy source"
+
       function onClick() {
         navigator.clipboard.writeText(source).then(
           () => {
             button.blur()
             button.innerHTML = svgCheck
+
             setTimeout(() => {
               button.innerHTML = svgCopy
               button.style.borderColor = ""
@@ -29,9 +34,122 @@ document.addEventListener("nav", () => {
           (error) => console.error(error),
         )
       }
+
       button.addEventListener("click", onClick)
-      window.addCleanup(() => button.removeEventListener("click", onClick))
+
+      window.addCleanup(() => {
+        button.removeEventListener("click", onClick)
+      })
+
       els[i].prepend(button)
     }
+  }
+
+  // Cambiar el título de las notas al pie
+  const footnoteHeading = document.querySelector(
+    "#quartz-body #footnote-label",
+  ) as HTMLElement | null
+
+  if (footnoteHeading) {
+    footnoteHeading.textContent = "Referencias"
+  }
+})
+
+// ==============================
+// Lightbox para imágenes
+// ==============================
+
+let imageLightbox: HTMLDivElement | null = null
+let imageLightboxImage: HTMLImageElement | null = null
+
+function closeImageLightbox() {
+  if (!imageLightbox) return
+
+  imageLightbox.classList.remove("active")
+  document.body.classList.remove("image-lightbox-open")
+}
+
+function openImageLightbox(src: string, alt: string) {
+  if (!imageLightbox) {
+    imageLightbox = document.createElement("div")
+    imageLightbox.className = "image-lightbox"
+
+    imageLightbox.innerHTML = `
+      <button
+        class="image-lightbox-close"
+        type="button"
+        aria-label="Cerrar imagen"
+      >
+        ×
+      </button>
+
+      <img
+        class="image-lightbox-image"
+        alt=""
+      />
+    `
+
+    document.body.appendChild(imageLightbox)
+
+    imageLightboxImage = imageLightbox.querySelector(
+      ".image-lightbox-image",
+    ) as HTMLImageElement
+
+    const closeButton = imageLightbox.querySelector(
+      ".image-lightbox-close",
+    ) as HTMLButtonElement
+
+    closeButton.addEventListener("click", closeImageLightbox)
+
+    imageLightbox.addEventListener("click", (event) => {
+      if (event.target === imageLightbox) {
+        closeImageLightbox()
+      }
+    })
+
+    window.addCleanup(() => {
+      closeButton.removeEventListener("click", closeImageLightbox)
+      imageLightbox?.remove()
+      imageLightbox = null
+      imageLightboxImage = null
+      document.body.classList.remove("image-lightbox-open")
+    })
+  }
+
+  if (!imageLightboxImage) return
+
+  imageLightboxImage.src = src
+  imageLightboxImage.alt = alt
+  imageLightbox.classList.add("active")
+  document.body.classList.add("image-lightbox-open")
+}
+
+function handleImageClick(event: MouseEvent) {
+  const image = event.currentTarget as HTMLImageElement
+
+  event.preventDefault()
+
+  openImageLightbox(image.src, image.alt)
+}
+
+document.addEventListener("nav", () => {
+  const images = document.querySelectorAll(
+    "#quartz-body img",
+  ) as NodeListOf<HTMLImageElement>
+
+  images.forEach((image) => {
+    image.style.cursor = "zoom-in"
+
+    image.addEventListener("click", handleImageClick)
+
+    window.addCleanup(() => {
+      image.removeEventListener("click", handleImageClick)
+    })
+  })
+})
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeImageLightbox()
   }
 })

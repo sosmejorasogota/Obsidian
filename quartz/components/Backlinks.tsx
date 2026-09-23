@@ -36,12 +36,12 @@ export default ((opts?: Partial<BacklinksOptions>) => {
         <OverflowList>
           {backlinkFiles.length > 0 ? (
             backlinkFiles.map((f) => (
-              <li>
-                <a href={resolveRelative(fileData.slug!, f.slug!)} class="internal">
-                  {f.frontmatter?.title}
-                </a>
-              </li>
-            ))
+             <li>
+             <a href={resolveRelative(fileData.slug!, f.slug!)} class="internal">
+             {f.slug === "index" ? "Tabla de contenido" : f.frontmatter?.title}
+            </a>
+           </li>
+           ))
           ) : (
             <li>{i18n(cfg.locale).components.backlinks.noBacklinksFound}</li>
           )}

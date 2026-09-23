@@ -5,6 +5,44 @@ import { fetchCanonical } from "./util"
 const p = new DOMParser()
 let activeAnchor: HTMLAnchorElement | null = null
 
+function handleObsidianURI(event: MouseEvent) {
+  const link = (event.currentTarget as HTMLAnchorElement)
+
+  if (!link.href.startsWith("obsidian://open")) {
+    return
+  }
+
+  event.preventDefault()
+
+  const obsidianUrl = new URL(link.href)
+  const file = obsidianUrl.searchParams.get("file")
+
+  if (!file) {
+    return
+  }
+
+  const targetFile = decodeURIComponent(file).replace(/\.md$/i, "")
+
+  fetchData.then((data) => {
+    const entry = Object.entries(data).find(([, content]) => {
+      const title = content.title ?? ""
+      return title === targetFile
+    })
+
+    if (!entry) {
+      console.warn(`No se encontró la nota "${targetFile}" en contentIndex.json`)
+      return
+    }
+
+    const [slug] = entry
+    const targetUrl = new URL(`${window.location.origin}${window.location.pathname}`)
+
+    targetUrl.pathname = `/${slug}`
+
+    window.spaNavigate(targetUrl)
+  })
+}
+
 async function mouseEnterHandler(
   this: HTMLAnchorElement,
   { clientX, clientY }: { clientX: number; clientY: number },
@@ -39,12 +77,18 @@ async function mouseEnterHandler(
     }
   }
 
-  const targetUrl = new URL(link.href)
-  const hash = decodeURIComponent(targetUrl.hash)
-  targetUrl.hash = ""
-  targetUrl.search = ""
-  const popoverId = `popover-${link.pathname}`
-  const prevPopoverElement = document.getElementById(popoverId)
+const targetUrl = new URL(link.href)
+const hash = decodeURIComponent(targetUrl.hash)
+targetUrl.hash = ""
+targetUrl.search = ""
+
+const isFootnote = hash.startsWith("#user-content-fn-")
+
+const popoverId = isFootnote
+  ? `popover-${link.pathname}-${hash.slice(1)}`
+  : `popover-${link.pathname}`
+
+const prevPopoverElement = document.getElementById(popoverId)
 
   // dont refetch if there's already a popover
   if (!!document.getElementById(popoverId)) {
@@ -87,19 +131,32 @@ async function mouseEnterHandler(
           break
       }
       break
-    default:
+      default:
       const contents = await response.text()
       const html = p.parseFromString(contents, "text/html")
       normalizeRelativeURLs(html, targetUrl)
+
       // prepend all IDs inside popovers to prevent duplicates
       html.querySelectorAll("[id]").forEach((el) => {
         const targetID = `popover-internal-${el.id}`
         el.id = targetID
       })
-      const elts = [...html.getElementsByClassName("popover-hint")]
-      if (elts.length === 0) return
 
-      elts.forEach((elt) => popoverInner.appendChild(elt))
+      // Footnotes: show only the selected footnote
+      if (hash.startsWith("#user-content-fn-")) {
+        const footnoteID = `popover-internal-${hash.slice(1)}`
+        const footnote = html.getElementById(footnoteID)
+
+        if (footnote) {
+          popoverInner.appendChild(footnote)
+        }
+      } else {
+        // Normal internal links: keep the existing Quartz behavior
+        const elts = [...html.getElementsByClassName("popover-hint")]
+        if (elts.length === 0) return
+
+        elts.forEach((elt) => popoverInner.appendChild(elt))
+      }
   }
 
   if (!!document.getElementById(popoverId)) {
@@ -122,12 +179,23 @@ function clearActivePopover() {
 
 document.addEventListener("nav", () => {
   const links = [...document.querySelectorAll("a.internal")] as HTMLAnchorElement[]
+  const obsidianLinks = [...document.querySelectorAll('a[href^="obsidian://open"]')] as HTMLAnchorElement[]
+
   for (const link of links) {
     link.addEventListener("mouseenter", mouseEnterHandler)
     link.addEventListener("mouseleave", clearActivePopover)
+
     window.addCleanup(() => {
       link.removeEventListener("mouseenter", mouseEnterHandler)
       link.removeEventListener("mouseleave", clearActivePopover)
+    })
+  }
+
+  for (const link of obsidianLinks) {
+    link.addEventListener("click", handleObsidianURI)
+
+    window.addCleanup(() => {
+      link.removeEventListener("click", handleObsidianURI)
     })
   }
 })

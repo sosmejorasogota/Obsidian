@@ -1,0 +1,223 @@
+{
+  "main": {
+    "id": "429a72612c029640",
+    "type": "split",
+    "children": [
+      {
+        "id": "cc5e439b6d6c3492",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "770a1f2edb752968",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Componente 5/Unidad 5.2/Sección 5.2.2 Sistema de hábitat.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sección 5.2.2 Sistema de hábitat"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "547defa19a43c8b6",
+    "type": "split",
+    "children": [
+      {
+        "id": "eadc5f27f25d488e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5a67345a00ac161e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "120d1792f109788a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "0047a52920e765f0",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 495.10003662109375
+  },
+  "right": {
+    "id": "4f0fe057f39c6dc3",
+    "type": "split",
+    "children": [
+      {
+        "id": "bd83557871c6f493",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "feea73737aabc7ea",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes"
+            }
+          },
+          {
+            "id": "b90e9ac6caf3565c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes"
+            }
+          },
+          {
+            "id": "b1a3b94df5d9d7a1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "e9e64f99e7def518",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Crear nueva base": false,
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "quartz-syncer:Quartz Syncer publication center": false
+    }
+  },
+  "active": "770a1f2edb752968",
+  "lastOpenFiles": [
+    "Componente 5/Unidad 5.2/Sección 5.2.1 Sistema de equipamientos.md",
+    "Componente 5/Unidad 5.2/Unidad 5.2 Estructura urbana.md",
+    "Componente 5/Unidad 5.1/Sección 5.1.2 Sistema de Servicios Públicos.md",
+    "Componente 5/Unidad 5.1/Unidad 5.1 Infraestructura.md",
+    "Componente 4/Unidad 4.3/Sección 4.3.3 Evolución de la ocupación del territorio.md",
+    "Componente 4/Unidad 4.3/Sección 4.3.2 La Región hídrica de Bogotá y su Estructura Ecológica Principal.md",
+    "Componente 4/Unidad 4.3/Unidad 4.3 Evolución, ordenamiento y clasificación del territorio.md",
+    "Componente 4/Unidad 4.2/Sección 4.2.3 La sostenibilidad territorial en Bogotá.md",
+    "Componente 4/Unidad 4.2/Sección 4.2.1 El paisaje de Bogotá.md",
+    "Componente 4/Unidad 4.2/Unidad 4.2 Paisaje, identidad y sostenibilidad territorial.md",
+    "Componente 4/Unidad 4.1/Sección 4.1.3 Las relaciones y determinantes ambientales del territorio.md",
+    "Componente 4/Unidad 4.1/Sección 4.1.1 Geografía, las ciencias naturales y características físicas del territorio.md",
+    "Componente 4/Componente 4 Dónde habitamos.md",
+    "Componente 3/Unidad 3.1/Unidad 3.1 La demografía.md",
+    "Componente 3/Componente 3 Cuántos y quienes somos.md",
+    "Componente 2/Unidad 2.3/Sección 2.3.3 Presupuesto distrital.md",
+    "Componente 2/Unidad 2.1/Sección 2.1.2 Mecanismos de participación constitucionales y participación ciudadana.md",
+    "Componente 2/Unidad 2.2/Sección 2.2.2 El estatuto orgánico de Bogotá D.C..md",
+    "Componente 1/Unidad 1.2/Sección 1.2.1 Características del estado.md",
+    "Componente 1/Unidad 1.1/Sección 1.1.3 Sistemas regulatorios y civilidad.md",
+    "Componente 1/Unidad 1.1/Sección 1.1.1 Teorías del conocimiento.md",
+    "Componente 6/Componente 6 Cómo nos proyectamos.md",
+    "Componente 6/Unidad 6.3/Unidad 6.3 La ciudad consolidada.md",
+    "Componente 6/Unidad 6.2/Unidad 6.2 La ciudad en expansión.md",
+    "Componente 6/Unidad 6.1/Unidad 6.1 De los muiscas a la ciudad moderna.md",
+    "Componente 1/Unidad 1.1/Unidad 1.1 Complejidad de las relaciones sociales.md",
+    "Componente 4/Gráfico 1.jpg",
+    "Componente 2/Gráfico 1.jpg",
+    "Componente 3/Unidad 3.3/Ecuacion7.png",
+    "Componente 3/Unidad 3.3/Ecuacion3.png",
+    "Componente 3/Unidad 3.3/Ecuacion1.png",
+    "Pasted image 20260916114031.png",
+    "Pasted image 20260909162350.png",
+    "Componente 4/Imagen 18.png",
+    "Componente 4/Imagen 17.png",
+    "Componente 4/Imagen 16.png",
+    "Sin título 3.base",
+    "Sin título 2.base",
+    "Sin título 1.base",
+    "Sin título.canvas",
+    "Sin título.base",
+    "Componente 6/Unidad 6.3",
+    "Componente 6/Unidad 6.2",
+    "Componente 6/Unidad 6.1",
+    "Componente 6",
+    "Componente 5/Unidad 5.3",
+    "Componente 5/Unidad 5.2"
+  ]
+}

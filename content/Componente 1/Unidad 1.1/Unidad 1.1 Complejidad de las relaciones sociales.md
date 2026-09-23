@@ -1,0 +1,10 @@
+[[Componente 1 Cómo conocemos]]
+- [Sección 1.1.1 Teorías del conocimiento](obsidian://open?vault=C%C3%A1tedraBogot%C3%A1&file=Secci%C3%B3n%201.1.1%20Teor%C3%ADas%20del%20conocimiento)
+- [Sección 1.1.2 La complejidad de las relaciones sociales](obsidian://open?vault=C%C3%A1tedraBogot%C3%A1&file=Secci%C3%B3n%201.1.2%20La%20complejidad%20de%20las%20relaciones%20sociales)
+- [Sección 1.1.3 Sistemas regulatorios y civilidad](obsidian://open?vault=C%C3%A1tedraBogot%C3%A1&file=Secci%C3%B3n%201.1.3%20Sistemas%20regulatorios%20y%20civilidad)
+
+La ciudad constituye una de las creaciones más complejas construida por el hombre, y Bogotá no es la excepción. Comprenderla de manera integral exige articular múltiples disciplinas, emplear metodologías diversas y adoptar una perspectiva capaz de reconocer las dimensiones que configuran la realidad urbana. En un contexto cada vez más interconectado, resulta indispensable comprender cómo se produce el conocimiento, cómo dialogan las distintas perspectivas para interpretar la realidad y de qué manera dicho conocimiento se adquiere, organiza y aplica.
+
+Con este propósito, la unidad presenta marcos epistemológicos como el funcionalismo, el estructuralismo o el pensamiento complejo. Este último permite superar explicaciones simplificadoras e integrar las dimensiones como las sociales, económicas, culturales o ambientales, entre otras. A partir de estos enfoques, se examina la complejidad de las relaciones sociales y la forma en que las personas aceptan, interpretan o rechazan las reglas que orientan su comportamiento en los ámbitos personal, social y político.
+
+Por último, se analizan los sistemas regulatorios, compuestos por principios morales, valores sociales y culturales y normas jurídicas. Estos sistemas protegen la seguridad individual y el interés público, favorecen la convivencia y promueven la civilidad como expresión de una vida social respetuosa, armónica y organizada.
