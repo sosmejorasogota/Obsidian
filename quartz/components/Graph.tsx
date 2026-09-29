@@ -72,12 +72,12 @@ const Graph: QuartzComponent = ({ displayClass, cfg, fileData }: QuartzComponent
      <div class="graph-legend">
       <div class="graph-legend-item">
         <span class="graph-legend-line graph-legend-prev"></span>
-        <span>Contenidos previos sugeridos</span>
+        <span>Secciones previas sugeridas</span>
       </div>
 
       <div class="graph-legend-item">
         <span class="graph-legend-line graph-legend-next"></span>
-        <span>Contenidos próximos sugeridos</span>
+        <span>Secciones próximas sugeridas</span>
       </div>
       </div>
    </div>
